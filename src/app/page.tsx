@@ -118,11 +118,11 @@ export default function TakeNextWebsite() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-1">The Operator</h3>
-                    <p className="text-blue-400 text-sm">Your dealership's AI control center.</p>
+                    <p className="text-blue-400 text-sm">Your dealership&apos;s AI control center.</p>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4 text-sm">
-                  The Operator is where every lead begins — whether it's text, chat, calls, or emails. 
+                  The Operator is where every lead begins — whether it&apos;s text, chat, calls, or emails. 
                   It responds instantly and manages the lifecycle of each prospect. The Operator decides: 
                   should the AI handle the next step, should the conversation be escalated, or should it 
                   be passed directly into the Bullpen for a salesperson? Think of it as the dispatcher and 
@@ -171,10 +171,10 @@ export default function TakeNextWebsite() {
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4 text-sm">
-                  The Playground is where ideas get tested before they go live. It's a safe space to explore 
+                  The Playground is where ideas get tested before they go live. It&apos;s a safe space to explore 
                   new prompts, conversation styles, or workflows without ever touching a real prospect. This is 
                   where you refine how your AI BDC swarm sounds, acts, and responds — ensuring it matches your 
-                  store's voice and strategy.
+                  store&apos;s voice and strategy.
                 </p>
                 <div className="inline-block px-3 py-1.5 bg-blue-600/10 border border-blue-500/20 rounded-lg">
                   <p className="text-xs text-blue-300">💡 This is where you refine the system</p>
