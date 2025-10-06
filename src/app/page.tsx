@@ -3,19 +3,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function TakeNextWebsite() {
-  const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = new FormData(form);
-    const fullName = (data.get("fullName") as string) || "";
-    const title = (data.get("title") as string) || "";
-    const phoneNumber = (data.get("phoneNumber") as string) || "";
-    const dealershipWebsite = (data.get("dealershipWebsite") as string) || "";
-
-    const subject = "New Take-Next demo request";
-    const body = `Full Name: ${fullName}\nTitle: ${title}\nPhone: ${phoneNumber}\nDealership Website: ${dealershipWebsite}`;
-    const mailto = `mailto:etully@hammer-corp.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    // Read values if needed later
+    // const data = new FormData(form);
+    // console.log(Object.fromEntries(data.entries()));
+    alert("Thank you! We'll reach out within 24 hours.");
     form.reset();
   };
 
@@ -319,15 +313,15 @@ export default function TakeNextWebsite() {
         </div>
       </section>
 
-      {/* Book Demo (Email) */}
+      {/* Book Demo */}
       <section id="book-demo" className="py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Book a demo</h2>
-            <p className="text-gray-400">Fill out the form and your email client will open with the details prefilled.</p>
+            <p className="text-gray-400">Fill out the form and we’ll contact you within 24 hours.</p>
           </div>
 
-          <form onSubmit={handleEmailSubmit} className="space-y-5">
+          <form onSubmit={handleFormSubmit} className="space-y-5">
             <div className="space-y-2">
               <label htmlFor="fullName" className="text-sm text-gray-300">Full Name *</label>
               <input
