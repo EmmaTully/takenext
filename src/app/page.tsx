@@ -1,7 +1,24 @@
-import { Button } from "@/components/ui/button";
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function TakeNextWebsite() {
+  const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const fullName = (data.get("fullName") as string) || "";
+    const title = (data.get("title") as string) || "";
+    const phoneNumber = (data.get("phoneNumber") as string) || "";
+    const dealershipWebsite = (data.get("dealershipWebsite") as string) || "";
+
+    const subject = "New Take-Next demo request";
+    const body = `Full Name: ${fullName}\nTitle: ${title}\nPhone: ${phoneNumber}\nDealership Website: ${dealershipWebsite}`;
+    const mailto = `mailto:etully@hammer-corp.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    form.reset();
+  };
+
   return (
     <div className="font-sans bg-black text-white">
       {/* Header */}
@@ -11,7 +28,7 @@ export default function TakeNextWebsite() {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#how-it-works" className="text-gray-300 hover:text-white transition">How it works</a>
             <a href="#pricing" className="text-gray-300 hover:text-white transition">Pricing</a>
-            <Button className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-sm">Get a demo</Button>
+            <a href="#book-demo" className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-sm inline-flex items-center justify-center">Get a demo</a>
           </nav>
         </div>
       </header>
@@ -26,7 +43,7 @@ export default function TakeNextWebsite() {
           to your team only when human involvement is required.
         </p>
         <div className="flex items-center justify-center">
-          <Button className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 text-xl rounded-full shadow-xl">Get a demo</Button>
+          <a href="#book-demo" className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 text-xl rounded-full shadow-xl inline-flex items-center justify-center">Get a demo</a>
         </div>
         <p className="mt-8 text-sm text-gray-500">Setup in 48 hours</p>
       </section>
@@ -296,9 +313,76 @@ export default function TakeNextWebsite() {
                   <span>Instant setup (48 hours)</span>
           </li>
               </ul>
-              <Button className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 text-lg rounded-full shadow-lg">Get started</Button>
+              <a href="#book-demo" className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 text-lg rounded-full shadow-lg inline-flex items-center justify-center">Get started</a>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Book Demo (Email) */}
+      <section id="book-demo" className="py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Book a demo</h2>
+            <p className="text-gray-400">Fill out the form and your email client will open with the details prefilled.</p>
+          </div>
+
+          <form onSubmit={handleEmailSubmit} className="space-y-5">
+            <div className="space-y-2">
+              <label htmlFor="fullName" className="text-sm text-gray-300">Full Name *</label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                required
+                placeholder="John Smith"
+                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="title" className="text-sm text-gray-300">Title *</label>
+              <input
+                id="title"
+                name="title"
+                type="text"
+                required
+                placeholder="General Manager"
+                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="phoneNumber" className="text-sm text-gray-300">Phone Number *</label>
+              <input
+                id="phoneNumber"
+                name="phoneNumber"
+                type="tel"
+                required
+                placeholder="(555) 123-4567"
+                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="dealershipWebsite" className="text-sm text-gray-300">Dealership Website *</label>
+              <input
+                id="dealershipWebsite"
+                name="dealershipWebsite"
+                type="url"
+                required
+                placeholder="https://yourdealership.com"
+                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 text-lg rounded-full shadow-lg"
+            >
+              Submit Request
+            </button>
+          </form>
         </div>
       </section>
 
