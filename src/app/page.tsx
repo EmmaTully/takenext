@@ -28,7 +28,7 @@ export default function TakeNextWebsite() {
         <div className="flex items-center justify-center">
           <Button className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 text-xl rounded-full shadow-xl">Get a demo</Button>
         </div>
-        <p className="mt-8 text-sm text-gray-500">No credit card required • Setup in 48 hours</p>
+        <p className="mt-8 text-sm text-gray-500">Setup in 48 hours</p>
       </section>
 
       {/* Problem Section */}
