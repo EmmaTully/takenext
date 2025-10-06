@@ -1,16 +1,26 @@
 "use client";
 
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function TakeNextWebsite() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    title: "",
+    phoneNumber: "",
+    dealershipWebsite: "",
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    // Read values if needed later
-    // const data = new FormData(form);
-    // console.log(Object.fromEntries(data.entries()));
     alert("Thank you! We'll reach out within 24 hours.");
-    form.reset();
+    setIsDialogOpen(false);
+    setFormData({ fullName: "", title: "", phoneNumber: "", dealershipWebsite: "" });
   };
 
   return (
@@ -22,7 +32,7 @@ export default function TakeNextWebsite() {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#how-it-works" className="text-gray-300 hover:text-white transition">How it works</a>
             <a href="#pricing" className="text-gray-300 hover:text-white transition">Pricing</a>
-            <a href="#book-demo" className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-sm inline-flex items-center justify-center">Get a demo</a>
+            <button onClick={() => setIsDialogOpen(true)} className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-sm">Get a demo</button>
           </nav>
         </div>
       </header>
@@ -37,7 +47,7 @@ export default function TakeNextWebsite() {
           to your team only when human involvement is required.
         </p>
         <div className="flex items-center justify-center">
-          <a href="#book-demo" className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 text-xl rounded-full shadow-xl inline-flex items-center justify-center">Get a demo</a>
+          <button onClick={() => setIsDialogOpen(true)} className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 text-xl rounded-full shadow-xl">Get a demo</button>
         </div>
         <p className="mt-8 text-sm text-gray-500">Setup in 48 hours</p>
       </section>
@@ -307,78 +317,82 @@ export default function TakeNextWebsite() {
                   <span>Instant setup (48 hours)</span>
           </li>
               </ul>
-              <a href="#book-demo" className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 text-lg rounded-full shadow-lg inline-flex items-center justify-center">Get started</a>
+              <button onClick={() => setIsDialogOpen(true)} className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 text-lg rounded-full shadow-lg">Get started</button>
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Book Demo */}
-      <section id="book-demo" className="py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Book a demo</h2>
-            <p className="text-gray-400">Fill out the form and we’ll contact you within 24 hours.</p>
+      {/* Popup Form (Modal) */}
+      {isDialogOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/80" onClick={() => setIsDialogOpen(false)} />
+          <div className="relative z-10 w-full max-w-lg mx-auto bg-gray-900 border border-gray-700 rounded-lg p-6 shadow-xl">
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold text-white">Get a demo</h3>
+              <p className="text-sm text-gray-400">Fill out the form below and we’ll get back to you within 24 hours to schedule your personalized demo.</p>
+            </div>
+            <form onSubmit={handleFormSubmit} className="space-y-4">
+              <div className="space-y-2">
+                <label htmlFor="fullName" className="text-sm text-gray-300">Full Name *</label>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  value={formData.fullName}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="John Smith"
+                  className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="title" className="text-sm text-gray-300">Title *</label>
+                <input
+                  id="title"
+                  name="title"
+                  type="text"
+                  value={formData.title}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="General Manager"
+                  className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="phoneNumber" className="text-sm text-gray-300">Phone Number *</label>
+                <input
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  type="tel"
+                  value={formData.phoneNumber}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="(555) 123-4567"
+                  className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="dealershipWebsite" className="text-sm text-gray-300">Dealership Website *</label>
+                <input
+                  id="dealershipWebsite"
+                  name="dealershipWebsite"
+                  type="url"
+                  value={formData.dealershipWebsite}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="https://yourdealership.com"
+                  className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div className="flex gap-3 pt-2">
+                <button type="button" onClick={() => setIsDialogOpen(false)} className="flex-1 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-full">Cancel</button>
+                <button type="submit" className="flex-1 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-full">Submit Request</button>
+              </div>
+            </form>
           </div>
-
-          <form onSubmit={handleFormSubmit} className="space-y-5">
-            <div className="space-y-2">
-              <label htmlFor="fullName" className="text-sm text-gray-300">Full Name *</label>
-              <input
-                id="fullName"
-                name="fullName"
-                type="text"
-                required
-                placeholder="John Smith"
-                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="title" className="text-sm text-gray-300">Title *</label>
-              <input
-                id="title"
-                name="title"
-                type="text"
-                required
-                placeholder="General Manager"
-                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="phoneNumber" className="text-sm text-gray-300">Phone Number *</label>
-              <input
-                id="phoneNumber"
-                name="phoneNumber"
-                type="tel"
-                required
-                placeholder="(555) 123-4567"
-                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <label htmlFor="dealershipWebsite" className="text-sm text-gray-300">Dealership Website *</label>
-              <input
-                id="dealershipWebsite"
-                name="dealershipWebsite"
-                type="url"
-                required
-                placeholder="https://yourdealership.com"
-                className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 text-lg rounded-full shadow-lg"
-            >
-              Submit Request
-            </button>
-          </form>
         </div>
-      </section>
+      )}
 
       {/* Footer */}
       <footer className="py-12 px-6 bg-black border-t border-gray-800">
