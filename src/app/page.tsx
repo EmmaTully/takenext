@@ -26,74 +26,55 @@ export default function TakeNextWebsite() {
   return (
     <div className="font-sans bg-black text-white">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm border-b border-gray-800 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="text-xl font-bold">Take‑Next</div>
-          <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#how-it-works" className="text-gray-300 hover:text-white transition">How it works</a>
-            <a href="#pricing" className="text-gray-300 hover:text-white transition">Pricing</a>
-            <button onClick={() => setIsDialogOpen(true)} className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full text-sm">Get a demo</button>
-          </nav>
+      <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+          <div className="flex items-center gap-12">
+            <div className="font-black" style={{ fontSize: '32px', lineHeight: '0.85', letterSpacing: '2px' }}>
+              <div>TAKE</div>
+              <div>NEXT</div>
+            </div>
+            <nav className="hidden md:flex items-center gap-8 text-base">
+              <a href="#pricing" className="text-white hover:text-gray-300 transition">Pricing</a>
+              <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
+            </nav>
+          </div>
+          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-3 rounded-lg text-base font-medium transition">Get Started</button>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="px-6 pt-32 pb-16 md:pt-40 md:pb-24 text-center">
-        <p className="text-xs tracking-widest text-blue-400 mb-3">AI BDC IN A BOX</p>
+      {/* Hero Video */}
+      <section className="relative w-full overflow-hidden mt-20" style={{ height: '70vh', minHeight: '500px' }}>
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/hero-video.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* CTA Overlay */}
+        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-4 z-10">
+          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-10 py-4 text-lg font-medium rounded-lg shadow-xl transition">Get Started</button>
+          <a href="#how-it-works" className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">See How It Works</a>
+        </div>
+      </section>
+
+      {/* Hero Content Section */}
+      <section className="hidden px-6 pt-32 pb-16 text-center bg-gradient-to-b from-black to-gray-900">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">Flip a switch.<br />Your BDC goes live.</h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
           Take‑Next is an AI‑native BDC department. It answers every lead instantly,
           holds two‑way text conversations, follows up automatically, and escalates
           to your team only when human involvement is required.
         </p>
-        <div className="flex items-center justify-center">
-          <button onClick={() => setIsDialogOpen(true)} className="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 text-xl rounded-full shadow-xl">Get a demo</button>
-        </div>
-        <p className="mt-8 text-sm text-gray-500">Setup in 48 hours</p>
-      </section>
-
-      {/* Problem Section */}
-      <section className="py-16 px-6 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">The BDC hiring nightmare</h2>
-            <p className="text-gray-400 text-lg">Dealers lose sleep over BDC staffing. Take‑Next eliminates it.</p>
-          </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-3">💰</div>
-                <h3 className="font-bold mb-2">Expensive to hire</h3>
-                <p className="text-gray-400 text-sm">$40–60K per rep annually, plus benefits, training, and management overhead.</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-3">🔄</div>
-                <h3 className="font-bold mb-2">High turnover</h3>
-                <p className="text-gray-400 text-sm">67% annual turnover. Constant recruiting and retraining cycles.</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-3">⏰</div>
-                <h3 className="font-bold mb-2">Inconsistent coverage</h3>
-                <p className="text-gray-400 text-sm">Sick days, vacations, and after-hours mean missed opportunities.</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-3">📉</div>
-                <h3 className="font-bold mb-2">Variable performance</h3>
-                <p className="text-gray-400 text-sm">Human inconsistency in response times, follow-ups, and lead qualification.</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        <p className="text-sm text-gray-500">Setup in 48 hours</p>
       </section>
 
       {/* How It Works - Unified Section */}
-      <section id="how-it-works" className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
+      <section id="how-it-works" className="pt-32 pb-20 px-6 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">How it works</h2>
@@ -103,127 +84,90 @@ export default function TakeNextWebsite() {
             </p>
           </div>
 
-          {/* The Flow */}
-          <div className="mb-20">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 text-center">
-              <div className="flex flex-col items-center">
-                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-3xl mb-3">📨</div>
-                <p className="text-sm text-gray-400 font-semibold">Lead comes in</p>
-              </div>
-              <div className="text-gray-600 text-4xl hidden md:block">→</div>
-              <div className="flex flex-col items-center">
-                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-3xl mb-3">🤖</div>
-                <p className="text-sm text-gray-400 font-semibold">AI engages</p>
-              </div>
-              <div className="text-gray-600 text-4xl hidden md:block">→</div>
-              <div className="flex flex-col items-center">
-                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-3xl mb-3">📞</div>
-                <p className="text-sm text-gray-400 font-semibold">Human closes</p>
-              </div>
-              <div className="text-gray-600 text-4xl hidden md:block">→</div>
-              <div className="flex flex-col items-center">
-                <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-3xl mb-3">✓</div>
-                <p className="text-sm text-gray-400 font-semibold">Deal done</p>
-              </div>
-            </div>
-          </div>
-
           {/* 2x2 Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Operator */}
-            <Card className="border-blue-500/30 hover:border-blue-500 transition-colors">
+            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     🎯
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-1">The Operator</h3>
-                    <p className="text-blue-400 text-sm">Your dealership&apos;s AI control center.</p>
+                    <p className="text-teal-400 text-sm">Your dealership&apos;s AI control center.</p>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-4 text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm">
                   The Operator is where every lead begins — whether it&apos;s text, chat, calls, or emails. 
                   It responds instantly and manages the lifecycle of each prospect. The Operator decides: 
                   should the AI handle the next step, should the conversation be escalated, or should it 
                   be passed directly into the Bullpen for a salesperson? Think of it as the dispatcher and 
                   traffic controller for all lead activity.
                 </p>
-                <div className="inline-block px-3 py-1.5 bg-blue-600/10 border border-blue-500/20 rounded-lg">
-                  <p className="text-xs text-blue-300">💡 This is where every lead starts</p>
-                </div>
               </CardContent>
             </Card>
 
             {/* Bullpen */}
-            <Card className="border-blue-500/30 hover:border-blue-500 transition-colors">
+            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     📞
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-1">The Bullpen</h3>
-                    <p className="text-blue-400 text-sm">Where AI and people meet to sell.</p>
+                    <p className="text-teal-400 text-sm">Where AI and people meet to sell.</p>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-4 text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm">
                   The Bullpen is the bridge between your AI BDC swarm and your sales team. Here, leads 
                   that require human touch are queued and delivered directly to your reps — no cherry-picking, 
                   no wasted time. By deciding who should be contacted next, the AI ensures every salesperson 
                   is always working the highest-priority opportunities.
                 </p>
-                <div className="inline-block px-3 py-1.5 bg-blue-600/10 border border-blue-500/20 rounded-lg">
-                  <p className="text-xs text-blue-300">💡 This is where AI hands off to humans</p>
-                </div>
               </CardContent>
             </Card>
 
             {/* Playground */}
-            <Card className="border-blue-500/30 hover:border-blue-500 transition-colors">
+            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     🧪
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-1">The Playground</h3>
-                    <p className="text-blue-400 text-sm">Experimentation without risk.</p>
+                    <p className="text-teal-400 text-sm">Experimentation without risk.</p>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-4 text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm">
                   The Playground is where ideas get tested before they go live. It&apos;s a safe space to explore 
                   new prompts, conversation styles, or workflows without ever touching a real prospect. This is 
                   where you refine how your AI BDC swarm sounds, acts, and responds — ensuring it matches your 
                   store&apos;s voice and strategy.
                 </p>
-                <div className="inline-block px-3 py-1.5 bg-blue-600/10 border border-blue-500/20 rounded-lg">
-                  <p className="text-xs text-blue-300">💡 This is where you refine the system</p>
-                </div>
               </CardContent>
             </Card>
 
             {/* Subscriber */}
-            <Card className="border-blue-500/30 hover:border-blue-500 transition-colors">
+            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     📊
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-1">The Subscriber</h3>
-                    <p className="text-blue-400 text-sm">The leadership view.</p>
+                    <p className="text-teal-400 text-sm">The leadership view.</p>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-4 text-sm">
+                <p className="text-gray-300 leading-relaxed text-sm">
                   The Subscriber is the bridge between AI and dealership leadership — giving owners, GMs, and 
                   OEMs a birds-eye view of their stores. From one place, leaders can see how reps are performing, 
                   which vehicles are selling, and how revenue is tracking. The AI acts as an assistant to management, 
                   escalating staff issues and surfacing missed opportunities.
                 </p>
-                <div className="inline-block px-3 py-1.5 bg-blue-600/10 border border-blue-500/20 rounded-lg">
-                  <p className="text-xs text-blue-300">💡 This is where leadership sees everything</p>
-                </div>
               </CardContent>
             </Card>
           </div>
@@ -235,15 +179,15 @@ export default function TakeNextWebsite() {
         <div className="max-w-5xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
+              <div className="text-5xl font-bold text-teal-400 mb-2">24/7</div>
               <p className="text-gray-400">Always‑on coverage</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-blue-400 mb-2">0%</div>
+              <div className="text-5xl font-bold text-teal-400 mb-2">0%</div>
               <p className="text-gray-400">Turnover rate</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-blue-400 mb-2">&lt;60s</div>
+              <div className="text-5xl font-bold text-teal-400 mb-2">&lt;60s</div>
               <p className="text-gray-400">Average response time</p>
             </div>
           </div>
@@ -317,7 +261,7 @@ export default function TakeNextWebsite() {
                   <span>Instant setup (48 hours)</span>
           </li>
               </ul>
-              <button onClick={() => setIsDialogOpen(true)} className="mt-6 w-full bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 text-lg rounded-full shadow-lg">Get started</button>
+              <button onClick={() => setIsDialogOpen(true)} className="mt-6 w-full bg-teal-500 hover:bg-teal-400 text-white px-6 py-4 text-lg font-medium rounded-lg shadow-lg transition">Get started</button>
             </CardContent>
           </Card>
         </div>
@@ -386,8 +330,8 @@ export default function TakeNextWebsite() {
                 />
               </div>
               <div className="flex gap-3 pt-2">
-                <button type="button" onClick={() => setIsDialogOpen(false)} className="flex-1 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-full">Cancel</button>
-                <button type="submit" className="flex-1 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-full">Submit Request</button>
+                <button type="button" onClick={() => setIsDialogOpen(false)} className="flex-1 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition">Cancel</button>
+                <button type="submit" className="flex-1 bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 rounded-lg font-medium transition">Submit Request</button>
               </div>
             </form>
           </div>
