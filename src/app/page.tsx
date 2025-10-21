@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function TakeNextWebsite() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     title: "",
@@ -28,11 +29,13 @@ export default function TakeNextWebsite() {
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
       const scriptURL = 'https://script.google.com/macros/s/AKfycbx506C5aQUrI5WXvMA5d2ptzvt-l-8whpOwyWCa-qaCazX2VdKKbbJ5T3wDabw1qJvFpg/exec';
       
-      await fetch(scriptURL, {
+      // Fire and forget - don't wait for response
+      fetch(scriptURL, {
         method: 'POST',
         mode: 'no-cors',
         body: JSON.stringify(formData),
@@ -41,11 +44,16 @@ export default function TakeNextWebsite() {
         },
       });
 
-      alert("Thank you! We'll reach out within 24 hours.");
-      setIsDialogOpen(false);
-      setFormData({ fullName: "", title: "", phoneNumber: "", dealershipWebsite: "" });
+      // Show success immediately
+      setTimeout(() => {
+        setIsSubmitting(false);
+        alert("Thank you! We'll reach out within 24 hours.");
+        setIsDialogOpen(false);
+        setFormData({ fullName: "", title: "", phoneNumber: "", dealershipWebsite: "" });
+      }, 500);
     } catch (error) {
       console.error('Error:', error);
+      setIsSubmitting(false);
       alert("Something went wrong. Please try again.");
     }
   };
@@ -360,8 +368,10 @@ export default function TakeNextWebsite() {
                 />
               </div>
               <div className="flex gap-3 pt-2">
-                <button type="button" onClick={() => setIsDialogOpen(false)} className="flex-1 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition">Cancel</button>
-                <button type="submit" className="flex-1 bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 rounded-lg font-medium transition">Submit Request</button>
+                <button type="button" onClick={() => setIsDialogOpen(false)} className="flex-1 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-medium transition" disabled={isSubmitting}>Cancel</button>
+                <button type="submit" className="flex-1 bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 rounded-lg font-medium transition disabled:opacity-50 disabled:cursor-not-allowed" disabled={isSubmitting}>
+                  {isSubmitting ? 'Submitting...' : 'Submit Request'}
+                </button>
               </div>
             </form>
           </div>
