@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Script from "next/script";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function TakeNextWebsite() {
@@ -12,19 +13,48 @@ export default function TakeNextWebsite() {
     dealershipWebsite: "",
   });
 
+  const openCalendly = () => {
+    if (typeof window !== 'undefined') {
+      const calendly = (window as typeof window & { Calendly?: { initPopupWidget: (options: { url: string }) => void } }).Calendly;
+      if (calendly) {
+        calendly.initPopupWidget({url: 'https://calendly.com/emma-take-next/30min'});
+      }
+    }
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Thank you! We'll reach out within 24 hours.");
-    setIsDialogOpen(false);
-    setFormData({ fullName: "", title: "", phoneNumber: "", dealershipWebsite: "" });
+    
+    try {
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbx506C5aQUrI5WXvMA5d2ptzvt-l-8whpOwyWCa-qaCazX2VdKKbbJ5T3wDabw1qJvFpg/exec';
+      
+      await fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      alert("Thank you! We'll reach out within 24 hours.");
+      setIsDialogOpen(false);
+      setFormData({ fullName: "", title: "", phoneNumber: "", dealershipWebsite: "" });
+    } catch (error) {
+      console.error('Error:', error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
-    <div className="font-sans bg-black text-white">
+    <>
+      <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+      <div className="font-sans bg-black text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
@@ -58,7 +88,7 @@ export default function TakeNextWebsite() {
         {/* CTA Overlay */}
         <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-4 z-10">
           <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-10 py-4 text-lg font-medium rounded-lg shadow-xl transition">Get Started</button>
-          <button onClick={() => setIsDialogOpen(true)} className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">Book Demo</button>
+          <button onClick={openCalendly} className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">Book Demo</button>
         </div>
       </section>
 
@@ -376,5 +406,6 @@ export default function TakeNextWebsite() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
