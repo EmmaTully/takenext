@@ -27,23 +27,23 @@ export default function TakeNextWebsite() {
     <div className="font-sans bg-black text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            <div className="font-black" style={{ fontSize: '32px', lineHeight: '0.85', letterSpacing: '2px' }}>
-              <div>TAKE</div>
-              <div>NEXT</div>
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6 flex items-center justify-between">
+          <div className="flex items-center gap-6 md:gap-12">
+            <div className="font-black" style={{ fontSize: '24px', lineHeight: '0.85', letterSpacing: '1.5px' }}>
+              <div className="md:text-[32px] md:tracking-[2px]">TAKE</div>
+              <div className="md:text-[32px] md:tracking-[2px]">NEXT</div>
             </div>
             <nav className="hidden md:flex items-center gap-8 text-base">
               <a href="#pricing" className="text-white hover:text-gray-300 transition">Pricing</a>
               <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
             </nav>
           </div>
-          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-3 rounded-lg text-base font-medium transition">Get Started</button>
+          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-4 py-2 md:px-8 md:py-3 rounded-lg text-sm md:text-base font-medium transition">Get Started</button>
         </div>
       </header>
 
       {/* Hero Video */}
-      <section className="relative w-full overflow-hidden mt-20" style={{ height: '70vh', minHeight: '500px' }}>
+      <section className="relative w-full overflow-hidden mt-16 md:mt-20" style={{ height: '60vh', minHeight: '400px' }}>
         <video 
           autoPlay 
           muted 
@@ -56,9 +56,9 @@ export default function TakeNextWebsite() {
         </video>
         
         {/* CTA Overlay */}
-        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-4 z-10">
-          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-10 py-4 text-lg font-medium rounded-lg shadow-xl transition">Get Started</button>
-          <a href="#how-it-works" className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">See How It Works</a>
+        <div className="absolute bottom-8 md:bottom-16 left-1/2 -translate-x-1/2 flex flex-col md:flex-row gap-3 md:gap-4 z-10 w-full px-4 md:w-auto md:px-0">
+          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-3 md:px-10 md:py-4 text-base md:text-lg font-medium rounded-lg shadow-xl transition whitespace-nowrap">Get Started</button>
+          <a href="#how-it-works" className="bg-transparent hover:bg-white/10 text-white px-8 py-3 md:px-10 md:py-4 text-base md:text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center justify-center transition whitespace-nowrap">See How It Works</a>
         </div>
       </section>
 
@@ -74,21 +74,21 @@ export default function TakeNextWebsite() {
       </section>
 
       {/* How It Works - Unified Section */}
-      <section id="how-it-works" className="pt-32 pb-20 px-6 bg-gradient-to-b from-black to-gray-900">
+      <section id="how-it-works" className="pt-16 md:pt-32 pb-12 md:pb-20 px-4 md:px-6 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">How it works</h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-12">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">How it works</h2>
+            <p className="text-gray-400 text-base md:text-xl max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed">
               From lead to sale, Take‑Next handles everything a modern BDC should do. 
               Four components work together to run your dealership — no hiring, no training, no turnover.
             </p>
           </div>
 
           {/* 2x2 Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Operator */}
             <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     🎯
@@ -110,7 +110,7 @@ export default function TakeNextWebsite() {
 
             {/* Bullpen */}
             <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     📞
@@ -131,7 +131,7 @@ export default function TakeNextWebsite() {
 
             {/* Playground */}
             <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     🧪
@@ -152,7 +152,7 @@ export default function TakeNextWebsite() {
 
             {/* Subscriber */}
             <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
                     📊
@@ -175,38 +175,38 @@ export default function TakeNextWebsite() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-16 px-6 bg-gray-900">
+      <section className="py-12 md:py-16 px-4 md:px-6 bg-gray-900">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-4 md:gap-8">
             <div>
-              <div className="text-5xl font-bold text-teal-400 mb-2">24/7</div>
-              <p className="text-gray-400">Always‑on coverage</p>
+              <div className="text-3xl md:text-5xl font-bold text-teal-400 mb-2">24/7</div>
+              <p className="text-gray-400 text-xs md:text-base">Always‑on coverage</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-teal-400 mb-2">0%</div>
-              <p className="text-gray-400">Turnover rate</p>
+              <div className="text-3xl md:text-5xl font-bold text-teal-400 mb-2">0%</div>
+              <p className="text-gray-400 text-xs md:text-base">Turnover rate</p>
             </div>
             <div>
-              <div className="text-5xl font-bold text-teal-400 mb-2">&lt;60s</div>
-              <p className="text-gray-400">Average response time</p>
+              <div className="text-3xl md:text-5xl font-bold text-teal-400 mb-2">&lt;60s</div>
+              <p className="text-gray-400 text-xs md:text-base">Average response time</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Market Positioning */}
-      <section id="pricing" className="py-20 px-6 max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Stop hiring. Start activating.</h2>
-          <p className="text-gray-400 text-lg">The math is simple. The decision is easier.</p>
+      <section id="pricing" className="py-12 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">Stop hiring. Start activating.</h2>
+          <p className="text-gray-400 text-base md:text-lg">The math is simple. The decision is easier.</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
           <Card className="border-red-500/30">
-            <CardContent className="p-8">
+            <CardContent className="p-6 md:p-8">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-semibold mb-2">Traditional BDC</h3>
-                <div className="text-5xl font-bold text-red-400 mb-2">$50K+</div>
-                <p className="text-gray-400 text-sm">per rep / year</p>
+                <h3 className="text-xl md:text-2xl font-semibold mb-2">Traditional BDC</h3>
+                <div className="text-4xl md:text-5xl font-bold text-red-400 mb-2">$50K+</div>
+                <p className="text-gray-400 text-xs md:text-sm">per rep / year</p>
               </div>
               <ul className="space-y-3 text-gray-400">
                 <li className="flex items-start">
@@ -233,11 +233,11 @@ export default function TakeNextWebsite() {
             </CardContent>
           </Card>
           <Card className="border-green-500/30">
-            <CardContent className="p-8">
+            <CardContent className="p-6 md:p-8">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-semibold mb-2">Take‑Next</h3>
-                <div className="text-5xl font-bold text-green-400 mb-2">$2,500</div>
-                <p className="text-gray-400 text-sm">per month / rooftop</p>
+                <h3 className="text-xl md:text-2xl font-semibold mb-2">Take‑Next</h3>
+                <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">$2,500</div>
+                <p className="text-gray-400 text-xs md:text-sm">per month / rooftop</p>
               </div>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -339,9 +339,9 @@ export default function TakeNextWebsite() {
       )}
 
       {/* Footer */}
-      <footer className="py-12 px-6 bg-black border-t border-gray-800">
+      <footer className="py-8 md:py-12 px-4 md:px-6 bg-black border-t border-gray-800">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
               <h3 className="font-bold mb-3">Take‑Next</h3>
               <p className="text-gray-500 text-sm">AI BDC in a box. Flip a switch, go live.</p>
