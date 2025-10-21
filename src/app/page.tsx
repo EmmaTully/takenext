@@ -27,9 +27,9 @@ export default function TakeNextWebsite() {
     <div className="font-sans bg-black text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-          <div className="flex items-center gap-12">
-            <div className="font-black" style={{ fontSize: '32px', lineHeight: '0.85', letterSpacing: '2px' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-6 flex items-center justify-between">
+          <div className="flex items-center gap-6 sm:gap-12">
+            <div className="font-black text-xl sm:text-3xl" style={{ lineHeight: '0.85', letterSpacing: '2px' }}>
               <div>TAKE</div>
               <div>NEXT</div>
             </div>
@@ -38,7 +38,7 @@ export default function TakeNextWebsite() {
               <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
             </nav>
           </div>
-          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-3 rounded-lg text-base font-medium transition">Get Started</button>
+          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-4 sm:px-8 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition whitespace-nowrap">Get Started</button>
         </div>
       </header>
 
@@ -56,9 +56,9 @@ export default function TakeNextWebsite() {
         </video>
         
         {/* CTA Overlay */}
-        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-4 z-10">
-          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-10 py-4 text-lg font-medium rounded-lg shadow-xl transition">Get Started</button>
-          <a href="#how-it-works" className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">See How It Works</a>
+        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col sm:flex-row gap-3 sm:gap-4 z-10 px-4 sm:px-0 w-full sm:w-auto max-w-md sm:max-w-none">
+          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-lg shadow-xl transition">Get Started</button>
+          <a href="#how-it-works" className="bg-transparent hover:bg-white/10 text-white px-8 sm:px-10 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center justify-center transition">See How It Works</a>
         </div>
       </section>
 
