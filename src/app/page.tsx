@@ -58,7 +58,7 @@ export default function TakeNextWebsite() {
         {/* CTA Overlay */}
         <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-4 z-10">
           <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-10 py-4 text-lg font-medium rounded-lg shadow-xl transition">Get Started</button>
-          <a href="#how-it-works" className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">See How It Works</a>
+          <button onClick={() => setIsDialogOpen(true)} className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">Book Demo</button>
         </div>
       </section>
 
