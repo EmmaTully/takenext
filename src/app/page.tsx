@@ -359,11 +359,11 @@ export default function TakeNextWebsite() {
                 <input
                   id="dealershipWebsite"
                   name="dealershipWebsite"
-                  type="url"
+                  type="text"
                   value={formData.dealershipWebsite}
                   onChange={handleInputChange}
                   required
-                  placeholder="https://yourdealership.com"
+                  placeholder="yourdealership.com"
                   className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
