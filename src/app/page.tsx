@@ -62,6 +62,28 @@ export default function TakeNextWebsite() {
     <>
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
       <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+      
+      {/* Meta Pixel */}
+      <Script id="facebook-pixel" strategy="afterInteractive">
+        {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1121932820100335');
+          fbq('track', 'PageView');
+        `}
+      </Script>
+      <noscript>
+        <img height="1" width="1" style={{display: 'none'}} 
+          src="https://www.facebook.com/tr?id=1121932820100335&ev=PageView&noscript=1" 
+          alt="" />
+      </noscript>
+      
       <div className="font-sans bg-black text-white">
       {/* Header */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
