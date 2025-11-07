@@ -296,7 +296,7 @@ export default function TakeNextWebsite() {
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-semibold mb-2">Take‑Next</h3>
-                <div className="text-5xl font-bold text-green-400 mb-2">$1,200</div>
+                <div className="text-5xl font-bold text-green-400 mb-2">$2,500</div>
                 <p className="text-gray-400 text-sm">per month / rooftop</p>
               </div>
               <ul className="space-y-3 text-gray-300">
