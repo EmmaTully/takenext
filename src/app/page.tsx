@@ -98,7 +98,10 @@ export default function TakeNextWebsite() {
               <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
             </nav>
           </div>
-          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-3 rounded-lg text-base font-medium transition">Get Started</button>
+          <div className="flex items-center gap-4">
+            <a href="https://app.takenext.ai" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition text-base font-medium">Login</a>
+            <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-3 rounded-lg text-base font-medium transition">Get Started</button>
+          </div>
         </div>
       </header>
 
