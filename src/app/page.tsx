@@ -114,7 +114,7 @@ export default function TakeNextWebsite() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/hero-video.mov" type="video/mp4" />
+          <source src="/takenext/hero-video.mov" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
