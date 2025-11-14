@@ -94,239 +94,154 @@ export default function TakeNextWebsite() {
               <div>NEXT</div>
             </div>
             <nav className="hidden md:flex items-center gap-8 text-base">
-              <a href="#pricing" className="text-white hover:text-gray-300 transition">Pricing</a>
+              <a href="#the-shift" className="text-white hover:text-gray-300 transition">The Shift</a>
               <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
+              <a href="#pricing" className="text-white hover:text-gray-300 transition">Pricing</a>
             </nav>
           </div>
           <div className="flex items-center gap-4">
             <a href="https://app.takenext.ai" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition text-base font-medium">Login</a>
-            <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-8 py-3 rounded-lg text-base font-medium transition">Get Started</button>
           </div>
         </div>
       </header>
 
-      {/* Hero Video */}
-      <section className="relative w-full overflow-hidden mt-20" style={{ height: '70vh', minHeight: '500px' }}>
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/hero-video.mov" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        
-        {/* CTA Overlay */}
-        <div className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-4 z-10">
-          <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-10 py-4 text-lg font-medium rounded-lg shadow-xl transition">Get Started</button>
-          <button onClick={openCalendly} className="bg-transparent hover:bg-white/10 text-white px-10 py-4 text-lg font-medium rounded-lg border-2 border-white shadow-xl inline-flex items-center transition">Book Demo</button>
+      {/* Hero Section */}
+      <section className="relative w-full overflow-hidden mt-20 px-6 py-32 bg-gradient-to-b from-black to-gray-900" style={{ minHeight: '70vh' }}>
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center h-full text-center">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight">
+            When AI knocks,
+          </h1>
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-teal-400 mb-16">
+            TakeNext answers.
+          </h2>
+          
+          {/* CTA Button */}
+          <div>
+            <button onClick={() => setIsDialogOpen(true)} className="bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 text-base font-medium rounded-lg shadow-lg transition">Get Started</button>
+          </div>
         </div>
       </section>
 
       {/* Hero Content Section */}
       <section className="hidden px-6 pt-32 pb-16 text-center bg-gradient-to-b from-black to-gray-900">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">Flip a switch.<br />Your BDC goes live.</h1>
-        <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Take‑Next is an AI‑native BDC department. It answers every lead instantly,
-          holds two‑way text conversations, follows up automatically, and escalates
-          to your team only when human involvement is required.
-        </p>
-        <p className="text-sm text-gray-500">Setup in 48 hours</p>
-      </section>
-
-      {/* How It Works - Unified Section */}
-      <section id="how-it-works" className="pt-32 pb-20 px-6 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">How it works</h2>
-            <p className="text-gray-400 text-xl max-w-3xl mx-auto mb-12">
-              From lead to sale, Take‑Next handles everything a modern BDC should do. 
-              Four components work together to run your dealership — no hiring, no training, no turnover.
-            </p>
-          </div>
-
-          {/* 2x2 Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Operator */}
-            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
-                    🎯
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-1">The Operator</h3>
-                    <p className="text-teal-400 text-sm">Your dealership&apos;s AI control center.</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  The Operator is where every lead begins — whether it&apos;s text, chat, calls, or emails. 
-                  It responds instantly and manages the lifecycle of each prospect. The Operator decides: 
-                  should the AI handle the next step, should the conversation be escalated, or should it 
-                  be passed directly into the Bullpen for a salesperson? Think of it as the dispatcher and 
-                  traffic controller for all lead activity.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Bullpen */}
-            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
-                    📞
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-1">The Bullpen</h3>
-                    <p className="text-teal-400 text-sm">Where AI and people meet to sell.</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  The Bullpen is the bridge between your AI BDC swarm and your sales team. Here, leads 
-                  that require human touch are queued and delivered directly to your reps — no cherry-picking, 
-                  no wasted time. By deciding who should be contacted next, the AI ensures every salesperson 
-                  is always working the highest-priority opportunities.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Playground */}
-            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
-                    🧪
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-1">The Playground</h3>
-                    <p className="text-teal-400 text-sm">Experimentation without risk.</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  The Playground is where ideas get tested before they go live. It&apos;s a safe space to explore 
-                  new prompts, conversation styles, or workflows without ever touching a real prospect. This is 
-                  where you refine how your AI BDC swarm sounds, acts, and responds — ensuring it matches your 
-                  store&apos;s voice and strategy.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Subscriber */}
-            <Card className="border-teal-500/30 hover:border-teal-500 transition-colors">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
-                    📊
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-1">The Subscriber</h3>
-                    <p className="text-teal-400 text-sm">The leadership view.</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed text-sm">
-                  The Subscriber is the bridge between AI and dealership leadership — giving owners, GMs, and 
-                  OEMs a birds-eye view of their stores. From one place, leaders can see how reps are performing, 
-                  which vehicles are selling, and how revenue is tracking. The AI acts as an assistant to management, 
-                  escalating staff issues and surfacing missed opportunities.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+        <div className="mb-8">
+          <p className="text-teal-400 text-sm font-semibold uppercase tracking-wider mb-4">The new verb</p>
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
+            AI talks to AI now.
+          </h1>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
+            Who answers yours?
+          </h2>
+        </div>
+        <div className="max-w-3xl mx-auto">
+          <p className="text-2xl text-white mb-8 font-semibold">
+            TakeNext.
+          </p>
+          <p className="text-lg text-gray-400 mb-12">
+            When AI talks, we take the next turn. Your business. Open for AI.
+          </p>
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-16 px-6 bg-gray-900">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-5xl font-bold text-teal-400 mb-2">24/7</div>
-              <p className="text-gray-400">Always‑on coverage</p>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-teal-400 mb-2">0%</div>
-              <p className="text-gray-400">Turnover rate</p>
-            </div>
-            <div>
-              <div className="text-5xl font-bold text-teal-400 mb-2">&lt;60s</div>
-              <p className="text-gray-400">Average response time</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Market Positioning */}
-      <section id="pricing" className="py-20 px-6 max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Stop hiring. Start activating.</h2>
-          <p className="text-gray-400 text-lg">The math is simple. The decision is easier.</p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          <Card className="border-red-500/30">
-            <CardContent className="p-8">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-semibold mb-2">Traditional BDC</h3>
-                <div className="text-5xl font-bold text-red-400 mb-2">$50K+</div>
-                <p className="text-gray-400 text-sm">per rep / year</p>
+      {/* The Shift */}
+      <section id="the-shift" className="py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left: Conversation UI */}
+            <div className="w-full">
+              <div className="relative w-full rounded-[32px] border border-gray-800 shadow-[0_20px_60px_rgba(0,0,0,0.45)] bg-gradient-to-b from-gray-900 to-black p-6 max-w-md mx-auto">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-1 rounded-full bg-gray-700/70" />
+                <div className="space-y-4 mt-4">
+                  <div className="rounded-2xl bg-gray-800/70 p-4 border border-gray-700">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Today · 8:12 AM · Her AI</p>
+                    <p className="text-white text-lg font-semibold">
+                      “Your lease is up in three weeks. Should I start looking at SUVs like we talked about?”
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-teal-500/10 p-4 border border-teal-500/30">
+                    <p className="text-xs uppercase tracking-widest text-teal-300 mb-1">Today · 8:13 AM · Sarah</p>
+                    <p className="text-gray-200 text-lg font-semibold">
+                      “Yeah. Certified Telluride. Under $45k. Near Austin.”
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-gray-800/70 p-4 border border-gray-700">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Today · 8:13 AM · Her AI</p>
+                    <p className="text-gray-200 text-lg">
+                      “Working on it. Checking inventory at twelve rooftops. Screening incentives and trade-ins…”
+                    </p>
+                  </div>
+                  <div className="rounded-2xl bg-gray-800/70 p-4 border border-gray-700">
+                    <p className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-1">Today · 8:15 AM · Her AI</p>
+                    <p className="text-gray-200 text-lg">
+                      “Great news - 3 of 12 dealers respond. I booked you at Northside Kia for 2:00 PM and saved the route to your calendar.”
+                    </p>
+                  </div>
+                </div>
               </div>
-              <ul className="space-y-3 text-gray-400">
-                <li className="flex items-start">
-                  <span className="text-red-400 mr-2">✗</span>
-                  <span>Limited hours coverage</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-400 mr-2">✗</span>
-                  <span>67% annual turnover</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-400 mr-2">✗</span>
-                  <span>Inconsistent performance</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-400 mr-2">✗</span>
-                  <span>Training & management overhead</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-400 mr-2">✗</span>
-                  <span>Variable quality</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-          <Card className="border-green-500/30">
-            <CardContent className="p-8">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-semibold mb-2">Take‑Next</h3>
-                <div className="text-5xl font-bold text-green-400 mb-2">$1,200</div>
-                <p className="text-gray-400 text-sm">per month / rooftop</p>
+            </div>
+
+            {/* Right: Explanation of the shift */}
+            <div className="space-y-6">
+              <p className="text-sm uppercase tracking-[0.4em] text-teal-400">The shift</p>
+              <h3 className="text-4xl font-bold">AI talks to AI now.</h3>
+              <div className="text-lg text-gray-300 leading-relaxed space-y-4">
+                <p>
+                  Consumers now have personal AIs knocking on doors. Those assistants compare inventory, request pricing, and try to schedule without ever picking up the phone. Most businesses still can’t answer those knocks.
+                </p>
+                <p>
+                  TakeNext is the last-mile platform that connects real-world businesses with third-party AIs. We scrap human-first systems and put your AI in the driver’s seat, connecting with consumer AIs, running the day-to-day coordination, and only calling in your team when human touch is required.
+                </p>
               </div>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
-                  <span>True 24/7 coverage</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
-                  <span>Zero turnover</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
-                  <span>Consistent performance</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
-                  <span>No training or management</span>
-          </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-2">✓</span>
-                  <span>Instant setup (48 hours)</span>
-          </li>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Flow + Pricing */}
+      <section className="relative py-32 px-6 bg-black overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute -top-48 -left-48 w-[420px] h-[420px] bg-teal-500/12 blur-[180px]" />
+          <div className="absolute bottom-[-100px] right-[-40px] w-[420px] h-[420px] bg-blue-400/15 blur-[180px]" />
+        </div>
+        <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-gray-500 mb-4">How it works</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Shoppers use AI.<br />You TakeNext.</h2>
+            <div className="space-y-8">
+              <div>
+                <p className="text-sm uppercase tracking-[0.4em] text-teal-400 mb-2">1 · Connect</p>
+                <p className="text-gray-300 text-lg leading-relaxed">We hook your AI into consumer, marketplace, and OEM AIs so every knock routes through TakeNext immediately.</p>
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.4em] text-teal-400 mb-2">2 · Coordinate</p>
+                <p className="text-gray-300 text-lg leading-relaxed">Your assistant answers in real time, checking systems, quoting price, scheduling, and logging receipts.</p>
+              </div>
+              <div>
+                <p className="text-sm uppercase tracking-[0.4em] text-teal-400 mb-2">3 · Call in people</p>
+                <p className="text-gray-300 text-lg leading-relaxed">When judgment matters, TakeNext escalates with full context. Humans respond, AI resumes control.</p>
+              </div>
+            </div>
+          </div>
+          <div id="pricing" className="self-start w-full max-w-sm mx-auto">
+            <div className="bg-gradient-to-b from-gray-800/80 to-gray-900 border border-gray-700/80 shadow-[0_25px_80px_rgba(0,0,0,0.55)] rounded-[32px] p-10 space-y-6 text-left">
+              <div>
+                <p className="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">Pricing</p>
+                <p className="text-5xl font-bold text-white">$89<span className="text-lg text-gray-500 font-normal">/user</span></p>
+                <p className="text-gray-500 text-sm mt-2">Seat-based access · Cancel anytime</p>
+              </div>
+              <ul className="space-y-3 text-gray-200 text-sm">
+                {["Custom app","Bullpen","Subscriber view","Playground","Operator"].map((feature) => (
+                  <li key={feature} className="flex items-center gap-3">
+                    <span className="inline-flex h-6 w-6 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-300 items-center justify-center text-xs font-semibold">✓</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
               </ul>
-              <button onClick={() => setIsDialogOpen(true)} className="mt-6 w-full bg-teal-500 hover:bg-teal-400 text-white px-6 py-4 text-lg font-medium rounded-lg shadow-lg transition">Get started</button>
-            </CardContent>
-          </Card>
+              <button onClick={() => setIsDialogOpen(true)} className="w-full bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 text-base font-medium rounded-full shadow-lg transition">
+                Get Started
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -380,7 +295,7 @@ export default function TakeNextWebsite() {
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="dealershipWebsite" className="text-sm text-gray-300">Dealership Website *</label>
+                <label htmlFor="dealershipWebsite" className="text-sm text-gray-300">Company Website *</label>
                 <input
                   id="dealershipWebsite"
                   name="dealershipWebsite"
@@ -388,7 +303,7 @@ export default function TakeNextWebsite() {
                   value={formData.dealershipWebsite}
                   onChange={handleInputChange}
                   required
-                  placeholder="yourdealership.com"
+                  placeholder="yourcompany.com"
                   className="w-full rounded-md bg-gray-800 border border-gray-700 text-white px-3 py-3 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
@@ -405,38 +320,27 @@ export default function TakeNextWebsite() {
 
       {/* Footer */}
       <footer className="py-12 px-6 bg-black border-t border-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+          <div>
+            <h3 className="font-bold mb-2 text-white">TakeNext</h3>
+            <p className="text-gray-500 text-sm">When AI knocks. TakeNext answers.</p>
+          </div>
+          <div className="flex gap-12 text-sm">
             <div>
-              <h3 className="font-bold mb-3">Take‑Next</h3>
-              <p className="text-gray-500 text-sm">AI BDC in a box. Flip a switch, go live.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3 text-sm">Product</h4>
-              <ul className="space-y-2 text-gray-500 text-sm">
-                <li><a href="#how-it-works" className="hover:text-white transition">How it works</a></li>
-                <li><a href="#components" className="hover:text-white transition">Components</a></li>
+              <h4 className="font-semibold mb-3 text-white">Navigate</h4>
+              <ul className="space-y-2 text-gray-500">
+                <li><a href="#the-shift" className="hover:text-white transition">The Shift</a></li>
+                <li><a href="#how-it-works" className="hover:text-white transition">How it Works</a></li>
                 <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3 text-sm">Company</h4>
-              <ul className="space-y-2 text-gray-500 text-sm">
-                <li><a href="#" className="hover:text-white transition">About</a></li>
-                <li><a href="#" className="hover:text-white transition">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3 text-sm">Legal</h4>
-              <ul className="space-y-2 text-gray-500 text-sm">
+              <h4 className="font-semibold mb-3 text-white">Legal</h4>
+              <ul className="space-y-2 text-gray-500">
                 <li><a href="#" className="hover:text-white transition">Privacy</a></li>
                 <li><a href="#" className="hover:text-white transition">Terms</a></li>
               </ul>
             </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-            <p>© {new Date().getFullYear()} Take‑Next. All rights reserved.</p>
           </div>
         </div>
       </footer>
