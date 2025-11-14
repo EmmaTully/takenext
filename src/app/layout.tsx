@@ -13,22 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Take‑Next — AI BDC in a Box",
+  title: "TakeNext — Open for AI",
   description:
-    "Flip a switch and your BDC goes live. Take‑Next handles every lead instantly, follows up automatically, and escalates to your team when needed.",
+    "Shoppers use AI. You TakeNext. The last-mile platform that connects real-world businesses to consumer, marketplace, and OEM AIs.",
   openGraph: {
-    title: "Take‑Next — AI BDC in a Box",
+    title: "TakeNext — Open for AI",
     description:
-      "Flip a switch and your BDC goes live. Take‑Next handles every lead instantly, follows up automatically, and escalates to your team when needed.",
-    url: "https://example.com",
-    siteName: "Take‑Next",
+      "TakeNext is the AI-to-AI connector that routes every knock, coordinates responses, and calls in people only when judgment matters.",
+    url: "https://takenext.com",
+    siteName: "TakeNext",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Take‑Next — AI BDC in a Box",
+    title: "TakeNext — Open for AI",
     description:
-      "Flip a switch and your BDC goes live. Take‑Next handles every lead instantly, follows up automatically, and escalates to your team when needed.",
+      "Seat-based A2A platform that lets your AI talk to consumer AIs, run coordination, and log receipts.",
   },
 };
 
