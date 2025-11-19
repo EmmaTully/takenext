@@ -224,19 +224,14 @@ export default function TakeNextWebsite() {
           </div>
           <div id="pricing" className="self-start w-full max-w-sm mx-auto">
             <div className="bg-gradient-to-b from-gray-800/80 to-gray-900 border border-gray-700/80 shadow-[0_25px_80px_rgba(0,0,0,0.55)] rounded-[32px] p-10 space-y-6 text-left">
-              <div>
-                <p className="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">Pricing</p>
+              <div className="space-y-1">
+                <p className="text-xs uppercase tracking-[0.4em] text-gray-500">Pricing</p>
                 <p className="text-5xl font-bold text-white">$299<span className="text-lg text-gray-500 font-normal">/month</span></p>
-                <p className="text-gray-500 text-sm mt-2">Includes 2 users · each additional user $39/mo</p>
+                <p className="text-gray-500 text-sm">Includes 2 users · each additional user $39/mo</p>
               </div>
-              <ul className="space-y-3 text-gray-200 text-sm">
-                {["Custom app","Bullpen","Subscriber view","Playground","Operator"].map((feature) => (
-                  <li key={feature} className="flex items-center gap-3">
-                    <span className="inline-flex h-6 w-6 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-300 items-center justify-center text-xs font-semibold">✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Flat-rate platform fee. Two seats included; every extra user is $39/mo. Cancel anytime.
+              </p>
               <button onClick={() => setIsDialogOpen(true)} className="w-full bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 text-base font-medium rounded-full shadow-lg transition">
                 Get Started
               </button>
