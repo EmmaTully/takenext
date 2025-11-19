@@ -226,8 +226,8 @@ export default function TakeNextWebsite() {
             <div className="bg-gradient-to-b from-gray-800/80 to-gray-900 border border-gray-700/80 shadow-[0_25px_80px_rgba(0,0,0,0.55)] rounded-[32px] p-10 space-y-6 text-left">
               <div>
                 <p className="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">Pricing</p>
-                <p className="text-5xl font-bold text-white">$89<span className="text-lg text-gray-500 font-normal">/user</span></p>
-                <p className="text-gray-500 text-sm mt-2">Seat-based access · Cancel anytime</p>
+                <p className="text-5xl font-bold text-white">$299<span className="text-lg text-gray-500 font-normal">/month</span></p>
+                <p className="text-gray-500 text-sm mt-2">Includes 2 users · each additional user $39/mo</p>
               </div>
               <ul className="space-y-3 text-gray-200 text-sm">
                 {["Custom app","Bullpen","Subscriber view","Playground","Operator"].map((feature) => (
