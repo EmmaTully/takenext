@@ -71,7 +71,9 @@ function parseSections(content: string) {
 
 export default function TermsPage() {
   const tosPath = path.join(process.cwd(), "TakeNext TOS.txt");
-  const content = fs.readFileSync(tosPath, "utf8");
+  const rawContent = fs.readFileSync(tosPath, "utf8");
+  // Remove the horizontal line separators
+  const content = rawContent.replace(/_{10,}\n*/g, "");
   const { intro, sections } = parseSections(content);
 
   return (
