@@ -1,68 +1,152 @@
 import fs from "node:fs";
 import path from "node:path";
+import { Fragment } from "react";
 
 export const revalidate = false;
 
-function splitIntoBlocks(content: string) {
-  return content
-    .split(/\n\s*\n/)
-    .map((block) => block.trim())
-    .filter(Boolean);
+const SECTION_REGEX = /\n(?=\d+\.\s)/;
+
+type Section = {
+  number: string;
+  title: string;
+  body: Array<{ type: "p" | "ul"; content: string | string[] }>;
+};
+
+function toParagraphChunks(lines: string[]) {
+  const chunks: Array<{ type: "p" | "ul"; content: string | string[] }> = [];
+  let paragraph: string[] = [];
+  let bullets: string[] = [];
+
+  const flushParagraph = () => {
+    if (paragraph.length) {
+      chunks.push({ type: "p", content: paragraph.join(" ") });
+      paragraph = [];
+    }
+  };
+
+  const flushBullets = () => {
+    if (bullets.length) {
+      chunks.push({ type: "ul", content: [...bullets] });
+      bullets = [];
+    }
+  };
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) {
+      flushParagraph();
+      flushBullets();
+      return;
+    }
+    if (/^\*/.test(trimmed)) {
+      flushParagraph();
+      bullets.push(trimmed.replace(/^\*\s*/, ""));
+    } else {
+      flushBullets();
+      paragraph.push(trimmed);
+    }
+  });
+
+  flushParagraph();
+  flushBullets();
+
+  return chunks;
+}
+
+function parseSections(content: string) {
+  const parts = content.split(SECTION_REGEX);
+  const intro = parts.shift() ?? "";
+  const sections: Section[] = parts.map((section) => {
+    const lines = section.split("\n").filter(Boolean);
+    const [firstLine, ...rest] = lines;
+    const match = firstLine.match(/^(\d+)\.\s*(.*)/);
+    const number = match?.[1] ?? "";
+    const title = match?.[2]?.trim() ?? firstLine.trim();
+    const body = toParagraphChunks(rest);
+    return { number, title, body };
+  });
+
+  return { intro: toParagraphChunks(intro.split("\n")), sections };
 }
 
 export default function TermsPage() {
   const tosPath = path.join(process.cwd(), "TakeNext TOS.txt");
   const content = fs.readFileSync(tosPath, "utf8");
-  const blocks = splitIntoBlocks(content);
+  const { intro, sections } = parseSections(content);
 
   return (
     <main className="min-h-screen bg-black text-white px-6 py-16">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <div className="space-y-2">
+      <div className="max-w-4xl mx-auto space-y-10">
+        <header className="space-y-3">
           <p className="text-xs uppercase tracking-[0.4em] text-gray-500">
             Legal
           </p>
           <h1 className="text-4xl md:text-5xl font-bold">
             TakeNext — Terms of Service
           </h1>
-          <p className="text-sm text-gray-400">
-            Last updated: November 19, 2025
-          </p>
-        </div>
-        <article className="space-y-6 text-sm leading-relaxed text-gray-200">
-          {blocks.map((block, idx) => {
-            const lines = block.split("\n").filter(Boolean);
-            return (
-              <section key={idx} className="space-y-2">
-                {lines.map((line, lineIdx) => {
-                  const trimmed = line.trim();
-                  const isHeading =
-                    lineIdx === 0 &&
-                    (/^\d+\./.test(trimmed) ||
-                      trimmed.startsWith("TAKE NEXT") ||
-                      trimmed.startsWith("Privacy Policy") ||
-                      trimmed === trimmed.toUpperCase());
-                  const isBullet = trimmed.startsWith("*");
-                  const text = isBullet ? trimmed.replace(/^\*\s*/, "• ") : trimmed;
+          <p className="text-sm text-gray-400">Last updated: November 19, 2025</p>
+        </header>
 
-                  return (
-                    <p
-                      key={lineIdx}
-                      className={
-                        isHeading
-                          ? "text-white font-semibold tracking-wide uppercase text-xs"
-                          : isBullet
-                          ? "text-gray-200 pl-4 text-[13px] leading-snug"
-                          : "text-gray-200 leading-relaxed"
-                      }
-                    >
-                      {text}
-                    </p>
-                  );
-                })}
-              </section>
-            );
-          })}
+        <section className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6 space-y-3">
+          <h2 className="text-xs uppercase tracking-[0.35em] text-gray-400">
+            Contents
+          </h2>
+          <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-gray-300">
+            {sections.map((section) => (
+              <li key={section.number}>
+                <a
+                  href={`#section-${section.number}`}
+                  className="hover:text-white transition"
+                >
+                  {section.number}. {section.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <article className="space-y-8 text-sm leading-relaxed text-gray-200">
+          <section className="space-y-3">
+            {intro.map((chunk, idx) => (
+              <Fragment key={`intro-${idx}`}>
+                {chunk.type === "p" ? (
+                  <p>{chunk.content as string}</p>
+                ) : (
+                  <ul className="list-disc list-inside space-y-1 text-gray-300">
+                    {(chunk.content as string[]).map((item, bulletIdx) => (
+                      <li key={bulletIdx}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </Fragment>
+            ))}
+          </section>
+
+          {sections.map((section) => (
+            <section
+              key={section.number}
+              id={`section-${section.number}`}
+              className="space-y-4 border-t border-gray-800 pt-6"
+            >
+              <h2 className="text-sm tracking-[0.3em] uppercase text-teal-300">
+                {section.number}. {section.title}
+              </h2>
+              {section.body.map((chunk, idx) =>
+                chunk.type === "p" ? (
+                  <p key={idx}>{chunk.content as string}</p>
+                ) : (
+                  <ul
+                    key={idx}
+                    className="list-disc list-inside space-y-1 text-gray-300"
+                  >
+                    {(chunk.content as string[]).map((item, bulletIdx) => (
+                      <li key={bulletIdx}>{item}</li>
+                    ))}
+                  </ul>
+                ),
+              )}
+            </section>
+          ))}
         </article>
       </div>
     </main>
