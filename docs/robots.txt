@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://takenext.com/sitemap.xml
