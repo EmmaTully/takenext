@@ -35,22 +35,28 @@ export default function TermsPage() {
             return (
               <section key={idx} className="space-y-2">
                 {lines.map((line, lineIdx) => {
+                  const trimmed = line.trim();
                   const isHeading =
                     lineIdx === 0 &&
-                    (/^\d+\./.test(line) ||
-                      line.startsWith("TAKE NEXT") ||
-                      line.startsWith("Privacy Policy") ||
-                      line === line.toUpperCase());
+                    (/^\d+\./.test(trimmed) ||
+                      trimmed.startsWith("TAKE NEXT") ||
+                      trimmed.startsWith("Privacy Policy") ||
+                      trimmed === trimmed.toUpperCase());
+                  const isBullet = trimmed.startsWith("*");
+                  const text = isBullet ? trimmed.replace(/^\*\s*/, "• ") : trimmed;
+
                   return (
                     <p
                       key={lineIdx}
                       className={
                         isHeading
                           ? "text-white font-semibold tracking-wide uppercase text-xs"
-                          : "text-gray-200"
+                          : isBullet
+                          ? "text-gray-200 pl-4 text-[13px] leading-snug"
+                          : "text-gray-200 leading-relaxed"
                       }
                     >
-                      {line}
+                      {text}
                     </p>
                   );
                 })}
