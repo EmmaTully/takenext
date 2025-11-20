@@ -38,8 +38,9 @@ function toParagraphChunks(lines: string[]) {
       flushBullets();
       return;
     }
-    // Check for various bullet patterns
-    if (/^[\*\-•]/.test(trimmed) || /^\w+$/.test(trimmed)) {
+    // For privacy policy, treat single words as continuations of text
+    // Only treat lines starting with actual bullet markers as bullets
+    if (/^[\*\-•]/.test(trimmed)) {
       flushParagraph();
       bullets.push(trimmed.replace(/^[\*\-•]\s*/, ""));
     } else {
