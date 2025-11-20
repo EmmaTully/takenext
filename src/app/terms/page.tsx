@@ -112,7 +112,7 @@ export default function TermsPage() {
                 {chunk.type === "p" ? (
                   <p>{chunk.content as string}</p>
                 ) : (
-                  <ul className="list-disc list-inside space-y-1 text-gray-300">
+                  <ul className="list-disc list-inside text-gray-300">
                     {(chunk.content as string[]).map((item, bulletIdx) => (
                       <li key={bulletIdx}>{item}</li>
                     ))}
@@ -137,7 +137,7 @@ export default function TermsPage() {
                 ) : (
                   <ul
                     key={idx}
-                    className="list-disc list-inside space-y-1 text-gray-300 leading-relaxed"
+                    className="list-disc list-inside text-gray-300 leading-normal"
                   >
                     {(chunk.content as string[]).map((item, bulletIdx) => (
                       <li key={bulletIdx}>{item}</li>
