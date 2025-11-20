@@ -1,6 +1,6 @@
 ﻿TAKE NEXT – TERMS OF SERVICE
 Last Updated: November 19, 2025
-Entity: TakeNext LLC, a Texas limited liability company (“TakeNext,” “we,” “us,” “our”).
+Entity: TakeNext Inc, a Texas corporation ("TakeNext," "we," "us," "our").
 These Terms of Service (“Terms”) form a legally binding agreement between you (“Client,” “you,” “your”) and TakeNext governing your access to and use of our websites, software, applications, AI systems, messaging tools, call tools, analytics, dashboards, and all related services (collectively, the “Services”).
 By accessing or using the Services, you agree to be bound by these Terms. If you do not agree to these Terms, you must not access or use the Services.
 If you are using the Services on behalf of a dealership, company, or other entity, you represent and warrant that you have authority to bind that entity to these Terms. In that case, “Client” refers to that entity.
@@ -461,7 +461,7 @@ ________________
 
 27. Notices
 Notices to TakeNext under these Terms must be sent in writing to:
-TakeNext LLC
-12710 Research Boulevard, unit 215 
-Austin, TX 78759
-Email: support@take-next.ai
+TakeNext Inc
+5900 Balcones Drive, Suite 100
+Austin, TX 78731
+Email: legal@takenext.com

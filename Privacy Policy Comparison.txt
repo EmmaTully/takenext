@@ -1,0 +1,110 @@
+PRIVACY POLICY COMPARISON: Original (Cleaned) vs. Michael's Version
+
+KEY DIFFERENCES:
+
+1. STRUCTURE & ORGANIZATION
+   - Original: Traditional numbered sections (1-13)
+   - Michael's: More detailed with subsections (e.g., 2.1, 2.2, 2.3)
+   - Michael's is MORE organized and easier to navigate
+
+2. SCOPE & CLARITY
+   - Original: General "you" throughout
+   - Michael's: Clearly defines 4 user categories (Clients, Authorized Users, Customers/End Users, Website Visitors)
+   - Michael's is CLEARER about who each section applies to
+
+3. DATA COLLECTION SPECIFICITY
+   Original (vague):
+   - "Analytics Information"
+   - "Contact Information" 
+   - "Payment Information"
+   
+   Michael's (specific):
+   - Detailed lists for each user type
+   - Specific automotive data (VIN, stock numbers, trade-in photos)
+   - Clear separation of call recordings, transcripts, AI summaries
+   - Explicitly mentions ChatGPT App integrations
+
+4. LEGAL ENTITY
+   - Both now use: TakeNext Inc (corrected from LLC)
+   - Both use: 5900 Balcones Drive, Suite 100, Austin, TX 78731
+
+5. RETENTION PERIODS
+   Original:
+   - General statements about retention
+   
+   Michael's:
+   - Specific: "Call recordings: up to 24 months"
+   - Specific: "Transcripts/SMS/MMS: up to 24 months"
+   - Matches the Terms of Service retention periods
+
+6. CLIENT VS. CUSTOMER DISTINCTION
+   Original:
+   - Mentions acting as "service provider/data processor" but less clear
+   
+   Michael's:
+   - Crystal clear: Section 7.2 explicitly states Customers must contact the Client (dealership) directly
+   - Clear that TakeNext is a processor, not controller, for Customer data
+
+7. AI-SPECIFIC PROVISIONS
+   Original:
+   - Brief mention of "AI-driven features"
+   
+   Michael's:
+   - Extensive: AI transcripts, summaries, tags, classifications
+   - AI usage summaries and derived data
+   - Matches the A2A positioning better
+
+8. COOKIES & TRACKING
+   Original:
+   - Long, detailed explanation
+   
+   Michael's:
+   - Concise but complete
+   - More practical
+
+9. CHILDREN'S PRIVACY
+   Original: Under 14 years
+   Michael's: Under 13 years (correct per COPPA)
+
+10. INTERNATIONAL TRANSFERS
+    Original:
+    - Focuses on Canada specifically
+    
+    Michael's:
+    - General international approach
+    - Clearer consent language
+
+11. CALIFORNIA PRIVACY RIGHTS
+    Original:
+    - Brief mention at the end
+    
+    Michael's:
+    - Dedicated Section 12 with CCPA/CPRA details
+    - Clear process for rights requests
+
+12. MISSING FROM MICHAEL'S VERSION
+    - Detailed cookie types (Essential, Functionality, Analytics, Advertising)
+    - Do Not Track signal response
+    - Specific Canada privacy commissioner contact info
+    - Managing cookies instructions
+
+13. TONE & READABILITY
+    Original: More conversational, longer
+    Michael's: More professional, concise, legally precise
+
+RECOMMENDATION:
+Use Michael's version as the base because it:
+1. Better reflects TakeNext's actual services (A2A, AI features)
+2. Clearer structure for different user types
+3. More legally precise while still readable
+4. Better aligns with the Terms of Service
+5. More appropriate for a B2B SaaS platform
+
+SUGGESTED ADDITIONS TO MICHAEL'S VERSION:
+1. Add cookie opt-out details from original
+2. Add "Do Not Track" disclosure
+3. Consider adding the email addresses:
+   - support@takenext.com (general)
+   - privacy@takenext.com (privacy requests)
+   - legal@takenext.com (legal matters)
+4. Add link to Terms of Service where appropriate

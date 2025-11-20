@@ -333,6 +333,7 @@ export default function TakeNextWebsite() {
               <h4 className="font-semibold mb-3 text-white">Legal</h4>
               <ul className="space-y-2 text-gray-500">
                 <li><a href="/terms" className="hover:text-white transition">Terms of Service</a></li>
+                <li><a href="/privacy" className="hover:text-white transition">Privacy Policy</a></li>
               </ul>
             </div>
           </div>

@@ -1,0 +1,1127 @@
+TakeNext Privacy Policy
+
+Last Updated: November 20, 2025
+
+This Privacy Policy explains how TakeNext Inc, a Texas corporation ("TakeNext," "we," "us," "our"), collects, uses, shares, and protects personal information in connection with our AI-native CRM, messaging tools, call recording and transcription features, analytics, and our website located at www.takenext.com (the "Website") (collectively, the "Services").
+
+By using the Services or providing us with personal information, you agree to the terms of this Privacy Policy. This Privacy Policy should be read together with our Terms of Service (available at www.takenext.com/terms).
+
+
+
+1. Scope — Who This Applies To
+
+This Privacy Policy applies to:
+
+Clients
+
+Businesses (such as car dealerships) that subscribe to and use the Services.
+
+ (If a Client is an individual, "Client" includes that individual's personal information.)
+
+Authorized Users
+
+Employees, agents, contractors, or other individuals a Client authorizes to use the Services.
+
+Customers (End Users)
+
+Individuals who interact with a Client via TakeNext—for example, by calling, texting, chatting, or submitting information through channels powered by TakeNext.
+
+Website Visitors
+
+Individuals who visit, browse, or interact with www.takenext.com, request demos, or consume our online content.
+
+"You" refers to any person whose personal information we process, and what we collect depends on your role.
+
+We may update this Privacy Policy periodically. The "Last Updated" date indicates when it was most recently revised.
+
+
+
+2. Personal Information We Collect
+
+The type of personal information we collect depends on your interactions with the Services.
+
+
+
+2.1 Information Provided by Clients & Authorized Users
+
+We may collect:
+
+Name
+
+
+
+
+
+Business name and business address
+
+
+
+
+
+Email address
+
+
+
+
+
+Phone number
+
+
+
+
+
+Job title or role
+
+
+
+
+
+Login credentials, security settings, and account configuration
+
+
+
+
+
+General location information
+
+
+
+
+
+Communications sent or received through the Services (including text messages, message attachments, chat content, notes)
+
+
+
+
+
+Call-Related Information
+
+If a Client enables call recording/transcription, we may collect:
+
+Call recordings
+
+
+
+
+
+AI-generated transcripts
+
+
+
+
+
+AI summaries, tags, or classifications
+
+
+
+
+
+Call metadata (time, duration, calling/called numbers, completion status)
+
+
+
+
+
+We may also collect business information required for account setup, verification, or billing.
+
+
+
+2.2 Information Provided by Customers (End Users)
+
+When a Customer interacts with a Client that uses TakeNext, we may collect:
+
+Name
+
+
+
+
+
+Email
+
+
+
+
+
+Phone number
+
+
+
+
+
+General location
+
+
+
+
+
+Address (where provided)
+
+
+
+
+
+Vehicle-related details (VIN, stock numbers, trade-in photos, preferences)
+
+
+
+
+
+Lead and interaction history
+
+
+
+
+
+Appointment and transaction information
+
+
+
+
+
+Reviews or feedback (if provided)
+
+
+
+
+
+Communications Content
+
+We process:
+
+Text messages (SMS/MMS)
+
+
+
+
+
+Photos, videos, or attachments
+
+
+
+
+
+Web chat messages
+
+
+
+
+
+Emails (if routed through the Services)
+
+
+
+
+
+Call recordings and call transcripts (if enabled by the Client)
+
+
+
+
+
+AI-generated summaries of calls or messages
+
+
+
+
+
+Clients are responsible for obtaining all legally required consent for recording calls and sending text messages.
+
+
+
+2.3 Information Collected from Website Visitors
+
+When you visit www.takenext.com, download content, or submit forms, we may collect:
+
+Name
+
+
+
+
+
+Email address
+
+
+
+
+
+Phone number
+
+
+
+
+
+Company name
+
+
+
+
+
+Website URL
+
+
+
+
+
+Job title
+
+
+
+
+
+Any information you submit to us voluntarily
+
+
+
+
+
+We may also automatically collect information described below.
+
+
+
+2.4 Information Collected Automatically
+
+We may automatically collect the following categories of information when you use the Services:
+
+A. Usage Information
+
+Features accessed
+
+
+
+
+
+Buttons clicked, pages visited, actions taken
+
+
+
+
+
+Telephony metadata (call status, time, duration, source/destination number)
+
+
+
+
+
+Message metadata (delivery status, timestamps)
+
+
+
+
+
+AI usage summaries, classifications, or derived data
+
+
+
+
+
+B. Device and Network Information
+
+IP address
+
+
+
+
+
+Browser type/version
+
+
+
+
+
+Operating system
+
+
+
+
+
+Device type and identifiers
+
+
+
+
+
+Mobile carrier
+
+
+
+
+
+Language settings
+
+
+
+
+
+General location inferred from IP
+
+
+
+
+
+C. Cookies & Tracking Technologies
+
+We use cookies, pixels, and similar tools to:
+
+Authenticate users
+
+
+
+
+
+Remember preferences
+
+
+
+
+
+Improve website performance
+
+
+
+
+
+Analyze trends and usage
+
+
+
+
+
+Support marketing and advertising for TakeNext
+
+
+
+
+
+You can control cookies via your browser settings.
+
+Do Not Track Signals
+
+There is currently no industry agreed-upon response to a Do Not Track signal. At this time, our Website does not respond differently based on a user's Do Not Track signal.
+
+
+
+2.5 Information From Linked or Integrated Accounts
+
+If a Client connects TakeNext to third-party tools (e.g., DMS, CRM, email providers, call routing systems, ChatGPT App integrations), we may receive:
+
+Lead data
+
+
+
+
+
+Contact records
+
+
+
+
+
+Inventory files
+
+
+
+
+
+Appointment or deal information
+
+
+
+
+
+Communication history (calls, emails, chats)
+
+
+
+
+
+User profile information
+
+
+
+
+
+We process this information as instructed by the Client.
+
+
+
+2.6 Information From Other Sources
+
+We may receive information from:
+
+Marketing and sales partners
+
+
+
+
+
+Data validation or enrichment tools
+
+
+
+
+
+Public sources (e.g., online business listings)
+
+
+
+
+
+Social media platforms when you interact with us there
+
+
+
+
+
+
+
+2.7 De-Identified or Aggregated Data
+
+We may create de-identified or aggregated data that cannot reasonably be linked to an individual. We may use such data for analytics and product development.
+
+We do not attempt to re-identify data except as allowed or required by law.
+
+
+
+3. How We Use Personal Information
+
+We use personal information to operate, improve, and support the Services.
+
+
+
+3.1 To Provide and Improve the Services
+
+We use information to:
+
+Create and manage accounts
+
+
+
+
+
+Authenticate users
+
+
+
+
+
+Route, record, and transcribe calls
+
+
+
+
+
+Send and receive SMS/MMS messages
+
+
+
+
+
+Provide AI-generated insights and summaries
+
+
+
+
+
+Manage leads and customers
+
+
+
+
+
+Display dashboards and reporting
+
+
+
+
+
+Provide customer support
+
+
+
+
+
+Maintain performance and security
+
+
+
+
+
+Develop new features and functionality
+
+
+
+
+
+
+
+3.2 For Analytics and Product Development
+
+We use information to:
+
+Understand how features are used
+
+
+
+
+
+Improve AI accuracy and performance
+
+
+
+
+
+Enhance reliability and user experience
+
+
+
+
+
+Diagnose and fix bugs
+
+
+
+
+
+Conduct research and development
+
+
+
+
+
+
+
+3.3 For Marketing and Advertising (TakeNext Only)
+
+We may use Client or Website Visitor information to:
+
+Send updates or promotional content
+
+
+
+
+
+Show ads for TakeNext on third-party platforms
+
+
+
+
+
+Assess marketing campaign effectiveness
+
+
+
+
+
+We do not use Customer-to-Client communications (e.g., a consumer texting a dealership) for TakeNext's own marketing.
+
+
+
+3.4 To Communicate With You
+
+We may send:
+
+Account and technical notices
+
+
+
+
+
+Training or onboarding information
+
+
+
+
+
+Demo details or requested materials
+
+
+
+
+
+Responses to inquiries
+
+
+
+
+
+Client-triggered messages to Customers (appointment reminders, follow-ups, etc.)
+
+
+
+
+
+
+
+3.5 For Legal, Compliance, and Security
+
+We may use personal information to:
+
+Enforce our Terms of Service
+
+
+
+
+
+Detect spam, fraud, or abusive behavior
+
+
+
+
+
+Monitor for platform misuse
+
+
+
+
+
+Investigate security incidents
+
+
+
+
+
+Comply with legal or regulatory obligations
+
+
+
+
+
+Respond to lawful requests
+
+
+
+
+
+
+
+4. How We Share Personal Information
+
+We share information only when necessary to operate the Services or comply with law.
+
+
+
+4.1 With Clients and Authorized Users
+
+If you are a Customer, your information (messages, call recordings, transcripts, photos, etc.) is shared with the Client you interact with.
+
+If the Client connects TakeNext to other systems, we share information as instructed by the Client.
+
+
+
+4.2 With Service Providers
+
+We may share information with third-party providers that:
+
+Host our infrastructure
+
+
+
+
+
+Provide telephony and messaging
+
+
+
+
+
+Deliver analytics and monitoring
+
+
+
+
+
+Offer customer support systems
+
+
+
+
+
+Process subscription payments
+
+
+
+
+
+Support sales and marketing functions
+
+
+
+
+
+These providers may only use information to perform services for TakeNext.
+
+
+
+4.3 With Affiliates
+
+We may share information with companies under common ownership or control for operational or legal purposes.
+
+
+
+4.4 For Legal, Compliance, and Security Purposes
+
+We may disclose information if necessary to:
+
+Protect TakeNext's rights or property
+
+
+
+
+
+Enforce agreements or investigate violations
+
+
+
+
+
+Detect or prevent fraud or abuse
+
+
+
+
+
+Comply with law, regulations, or lawful requests
+
+
+
+
+
+Respond to government or legal inquiries
+
+
+
+
+
+
+
+4.5 Business Transfers
+
+If TakeNext undergoes:
+
+Merger
+
+
+
+
+
+Acquisition
+
+
+
+
+
+Financing
+
+
+
+
+
+Reorganization
+
+
+
+
+
+Sale of assets
+
+
+
+
+
+Personal information may be transferred as part of the transaction.
+
+
+
+5. Cookies and Similar Technologies
+
+We use:
+
+Cookies
+
+
+
+
+
+Pixels
+
+
+
+
+
+Tags
+
+
+
+
+
+Scripts
+
+
+
+
+
+For:
+
+Authentication
+
+
+
+
+
+Remembering settings
+
+
+
+
+
+Security
+
+
+
+
+
+Performance monitoring
+
+
+
+
+
+Analytics
+
+
+
+
+
+Advertising
+
+
+
+
+
+You can manage cookies through your browser settings.
+
+
+
+6. Retention
+
+We retain information for as long as reasonably necessary to:
+
+Provide the Services
+
+
+
+
+
+Comply with legal requirements
+
+
+
+
+
+Resolve disputes
+
+
+
+
+
+Maintain security
+
+
+
+
+
+Examples:
+
+Call recordings: up to 24 months
+
+
+
+
+
+Transcripts/SMS/MMS: up to 24 months
+
+
+
+
+
+Account records: duration of account + reasonable period
+
+
+
+
+
+Security logs: per operational needs
+
+
+
+
+
+De-identified data may be stored indefinitely.
+
+
+
+7. Your Rights and Choices
+
+Your available rights depend on your role and location.
+
+
+
+7.1 Clients & Authorized Users
+
+You may:
+
+Access or update your account
+
+
+
+
+
+Request access, correction, or deletion by emailing legal@takenext.com
+
+
+
+
+
+Identity verification may be required.
+
+
+
+7.2 Customers (End Users)
+
+When we process Customer data, we act as a service provider to the Client.
+
+To access, correct, or delete your data, contact the Client directly (e.g., the dealership).
+
+We will assist the Client per our contractual obligations.
+
+
+
+7.3 Marketing Preferences
+
+Clients and Website Visitors may:
+
+Unsubscribe from promotional emails
+
+
+
+
+
+Request removal from marketing lists
+
+
+
+
+
+Customers receiving messages from a Client must follow that business's opt-out instructions.
+
+
+
+8. Security
+
+We use commercially reasonable safeguards to protect personal information. No system is guaranteed 100% secure.
+
+Clients and Authorized Users are responsible for maintaining secure passwords and limiting access to their accounts.
+
+
+
+9. Client Practices & Third-Party Sites
+
+We are not responsible for:
+
+How Clients independently handle personal information
+
+
+
+
+
+The privacy practices of linked third-party websites or services
+
+
+
+
+
+
+
+10. Children
+
+We do not knowingly collect data from children under 13.
+
+ If you believe a child provided us information, contact us to request removal.
+
+
+
+11. International Use and Data Transfers
+
+The Services are primarily operated in the United States.
+
+If you use the Services from outside the U.S., your information may be transferred to and processed in countries with different data protection laws.
+
+By using the Services, you consent to these transfers.
+
+
+
+12. California Privacy Rights (CCPA / CPRA)
+
+If you are a California resident, you may request:
+
+Access to your personal information
+
+
+
+
+
+Correction
+
+
+
+
+
+Deletion
+
+
+
+
+
+Information about disclosures
+
+
+
+
+
+Opt-out of certain data sharing practices
+
+
+
+
+
+To exercise these rights regarding data we handle as a business, contact us at legal@takenext.com.
+
+If you are a Customer of a Client, contact the Client directly.
+
+We do not "sell" personal information in the traditional sense.
+
+ We may use cookies for cross-context advertising of TakeNext, where allowed.
+
+
+
+13. Changes to This Privacy Policy
+
+We may update this Privacy Policy periodically.
+
+ If changes are material, we will notify Clients and Authorized Users using the email on file or a notice within the Services.
+
+
+
+14. Contact Us
+
+If you have questions or want to exercise your privacy rights, contact:
+
+TakeNext Inc
+
+ Attn: Privacy / Legal
+
+ 5900 Balcones Drive, Suite 100
+
+ Austin, TX 78731
+
+ Email: legal@takenext.com
