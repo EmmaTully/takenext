@@ -89,17 +89,19 @@ export default function TakeNextWebsite() {
       {/* Header */}
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-          <nav className="hidden md:flex items-center gap-8 text-base">
-            <a href="#the-shift" className="text-white hover:text-gray-300 transition">The Shift</a>
-            <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
-            <a href="#pricing" className="text-white hover:text-gray-300 transition">Pricing</a>
-          </nav>
-          <div className="flex items-center gap-6">
-            <a href="https://app.takenext.ai" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition text-base font-medium">Login</a>
+          <div className="flex items-center gap-12">
             <Link href="/" className="font-black hover:opacity-80 transition" style={{ fontSize: '32px', lineHeight: '0.85', letterSpacing: '2px' }}>
               <div>TAKE</div>
               <div>NEXT</div>
             </Link>
+            <nav className="hidden md:flex items-center gap-8 text-base">
+              <a href="#the-shift" className="text-white hover:text-gray-300 transition">The Shift</a>
+              <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
+              <a href="#pricing" className="text-white hover:text-gray-300 transition">Pricing</a>
+            </nav>
+          </div>
+          <div className="flex items-center gap-4">
+            <a href="https://app.takenext.ai" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition text-base font-medium">Login</a>
           </div>
         </div>
       </header>
