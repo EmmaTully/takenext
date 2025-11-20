@@ -68,13 +68,13 @@ export default function TermsPage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 px-6 py-6">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <Link href="/" className="text-white hover:text-gray-300 transition text-sm">← Back to Home</Link>
-          <Link href="/" className="font-black hover:opacity-80 transition" style={{ fontSize: '28px', lineHeight: '0.85', letterSpacing: '2px' }}>
+      <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+          <Link href="/" className="font-black hover:opacity-80 transition" style={{ fontSize: '32px', lineHeight: '0.85', letterSpacing: '2px' }}>
             <div>TAKE</div>
             <div>NEXT</div>
           </Link>
+          <Link href="/" className="text-white hover:text-gray-300 transition text-base">← Back to Home</Link>
         </div>
       </header>
       <div className="max-w-4xl mx-auto space-y-10 px-6 pt-32 pb-16">
