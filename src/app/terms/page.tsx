@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { Fragment } from "react";
+import Link from "next/link";
 
 export const revalidate = false;
 
@@ -66,8 +67,17 @@ export default function TermsPage() {
   const { intro, sections } = parseSections(content);
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-16">
-      <div className="max-w-4xl mx-auto space-y-10">
+    <main className="min-h-screen bg-black text-white">
+      <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 px-6 py-6">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <Link href="/" className="text-white hover:text-gray-300 transition text-sm">← Back to Home</Link>
+          <Link href="/" className="font-black hover:opacity-80 transition" style={{ fontSize: '28px', lineHeight: '0.85', letterSpacing: '2px' }}>
+            <div>TAKE</div>
+            <div>NEXT</div>
+          </Link>
+        </div>
+      </header>
+      <div className="max-w-4xl mx-auto space-y-10 px-6 pt-32 pb-16">
         <header className="space-y-3">
           <p className="text-xs uppercase tracking-[0.4em] text-gray-500">
             Legal
