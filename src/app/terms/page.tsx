@@ -15,7 +15,6 @@ type Section = {
 function toParagraphChunks(lines: string[]) {
   const chunks: Array<{ type: "p" | "ul"; content: string | string[] }> = [];
   let paragraph: string[] = [];
-  let bulletGroup: string[] = [];
 
   const flushParagraph = () => {
     if (paragraph.length) {
@@ -24,42 +23,21 @@ function toParagraphChunks(lines: string[]) {
     }
   };
 
-  const flushBullets = () => {
-    if (bulletGroup.length) {
-      let sentence = bulletGroup.join(", ");
-      if (!/[.!?]$/.test(sentence)) {
-        sentence = `${sentence}.`;
-      }
-      chunks.push({ type: "p", content: sentence });
-      bulletGroup = [];
-    }
-  };
-
   lines.forEach((line) => {
     const trimmed = line.trim();
     if (!trimmed) {
       flushParagraph();
-      flushBullets();
       return;
     }
-    if (/^[*•-]/.test(trimmed)) {
-      const text = trimmed.replace(/^[*•-]\s*/, "").trim();
-      const isSentence = /[.!?]$/.test(text);
+    if (/^[\*•\-]/.test(trimmed)) {
       flushParagraph();
-      if (isSentence) {
-        flushBullets();
-        chunks.push({ type: "p", content: text });
-      } else {
-        bulletGroup.push(text);
-      }
+      chunks.push({ type: "p", content: trimmed.replace(/^[\*•\-]\s*/, "") });
       return;
     }
-    flushBullets();
     paragraph.push(trimmed);
   });
 
   flushParagraph();
-  flushBullets();
 
   return chunks;
 }
