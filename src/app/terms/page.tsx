@@ -15,7 +15,6 @@ type Section = {
 function toParagraphChunks(lines: string[]) {
   const chunks: Array<{ type: "p" | "ul"; content: string | string[] }> = [];
   let paragraph: string[] = [];
-  let bullets: string[] = [];
 
   const flushParagraph = () => {
     if (paragraph.length) {
@@ -24,31 +23,21 @@ function toParagraphChunks(lines: string[]) {
     }
   };
 
-  const flushBullets = () => {
-    if (bullets.length) {
-      chunks.push({ type: "ul", content: [...bullets] });
-      bullets = [];
-    }
-  };
-
   lines.forEach((line) => {
     const trimmed = line.trim();
     if (!trimmed) {
       flushParagraph();
-      flushBullets();
       return;
     }
-    if (/^\*/.test(trimmed)) {
+    if (/^[\*•\-]/.test(trimmed)) {
       flushParagraph();
-      bullets.push(trimmed.replace(/^\*\s*/, ""));
-    } else {
-      flushBullets();
-      paragraph.push(trimmed);
+      chunks.push({ type: "p", content: trimmed.replace(/^[\*•\-]\s*/, "") });
+      return;
     }
+    paragraph.push(trimmed);
   });
 
   flushParagraph();
-  flushBullets();
 
   return chunks;
 }
