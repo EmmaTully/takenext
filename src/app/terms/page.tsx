@@ -137,7 +137,7 @@ export default function TermsPage() {
                 ) : (
                   <ul
                     key={idx}
-                    className="list-disc list-inside space-y-1 text-gray-300"
+                    className="list-disc list-inside space-y-1 text-gray-300 leading-relaxed"
                   >
                     {(chunk.content as string[]).map((item, bulletIdx) => (
                       <li key={bulletIdx}>{item}</li>
