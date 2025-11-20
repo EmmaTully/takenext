@@ -81,10 +81,9 @@ export default function PrivacyPage() {
     <main className="min-h-screen bg-black text-white">
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-          <Link href="/" className="font-black hover:opacity-80 transition" style={{ fontSize: '32px', lineHeight: '0.85', letterSpacing: '2px', fontWeight: '900' }}>
-            <div>TAKE</div>
-            <div>NEXT</div>
-          </Link>
+        <Link href="/" className="hover:opacity-80 transition">
+          <img src="/takenext_logo.png" alt="TakeNext" className="h-12 w-auto" />
+        </Link>
           <Link href="/" className="text-white hover:text-gray-300 transition text-base">← Back to Home</Link>
         </div>
       </header>

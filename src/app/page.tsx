@@ -90,9 +90,8 @@ export default function TakeNextWebsite() {
       <header className="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
           <div className="flex items-center gap-12">
-            <Link href="/" className="font-black hover:opacity-80 transition" style={{ fontSize: '32px', lineHeight: '0.85', letterSpacing: '2px' }}>
-              <div>TAKE</div>
-              <div>NEXT</div>
+            <Link href="/" className="hover:opacity-80 transition">
+              <img src="/takenext_logo.png" alt="TakeNext" className="h-12 w-auto" />
             </Link>
             <nav className="hidden md:flex items-center gap-8 text-base">
               <a href="#the-shift" className="text-white hover:text-gray-300 transition">The Shift</a>
