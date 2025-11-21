@@ -95,6 +95,7 @@ export default function TakeNextWebsite() {
             </Link>
             <nav className="hidden md:flex items-center gap-8 text-base">
               <a href="#the-shift" className="text-white hover:text-gray-300 transition">The Shift</a>
+              <a href="#features" className="text-white hover:text-gray-300 transition">Features</a>
               <a href="#how-it-works" className="text-white hover:text-gray-300 transition">How It Works</a>
               <a href="#pricing" className="text-white hover:text-gray-300 transition">Pricing</a>
             </nav>
@@ -192,6 +193,110 @@ export default function TakeNextWebsite() {
                   TakeNext is the last-mile platform that connects real-world businesses with third-party AIs. We scrap human-first systems and put your AI in the driver’s seat, connecting with consumer AIs, running the day-to-day coordination, and only calling in your team when human touch is required.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-6 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.4em] text-gray-500 mb-4">Platform</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Four features. Everything you need.</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Dialer */}
+            <div className="bg-gradient-to-b from-gray-900/50 to-black border border-gray-800 rounded-2xl p-8 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="text-3xl">📞</div>
+                <h3 className="text-2xl font-bold">Dialer</h3>
+              </div>
+              <p className="text-lg text-gray-300 font-medium">Your AI-powered Bullpen</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Routes calls intelligently</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Records & transcribes automatically</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Live coaching and seamless take-over</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* AI Operator */}
+            <div className="bg-gradient-to-b from-gray-900/50 to-black border border-gray-800 rounded-2xl p-8 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="text-3xl">🤖</div>
+                <h3 className="text-2xl font-bold">AI Operator</h3>
+              </div>
+              <p className="text-lg text-gray-300 font-medium">Your always-on team member</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Answers calls, texts, and chats</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Books appointments instantly</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Knows when to loop in humans</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Smart Reporting */}
+            <div className="bg-gradient-to-b from-gray-900/50 to-black border border-gray-800 rounded-2xl p-8 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="text-3xl">📊</div>
+                <h3 className="text-2xl font-bold">Smart Reporting</h3>
+              </div>
+              <p className="text-lg text-gray-300 font-medium">See everything, miss nothing</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Real-time conversation logs</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Track what converts</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Spot trends and opportunities</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Playground */}
+            <div className="bg-gradient-to-b from-gray-900/50 to-black border border-gray-800 rounded-2xl p-8 space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="text-3xl">🔧</div>
+                <h3 className="text-2xl font-bold">Playground</h3>
+              </div>
+              <p className="text-lg text-gray-300 font-medium">Test before you deploy</p>
+              <ul className="space-y-3 text-gray-400">
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Try different responses</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Train your AI safely</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-teal-400 mr-2">•</span>
+                  <span>Launch when you&apos;re ready</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -325,6 +430,7 @@ export default function TakeNextWebsite() {
               <h4 className="font-semibold mb-3 text-white">Navigate</h4>
               <ul className="space-y-2 text-gray-500">
                 <li><a href="#the-shift" className="hover:text-white transition">The Shift</a></li>
+                <li><a href="#features" className="hover:text-white transition">Features</a></li>
                 <li><a href="#how-it-works" className="hover:text-white transition">How it Works</a></li>
                 <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
               </ul>
