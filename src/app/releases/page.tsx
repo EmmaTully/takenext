@@ -57,9 +57,9 @@ const releases: WeeklyRelease[] = [
 ];
 
 const typeConfig = {
-  feature: { label: "New Features", emoji: "", color: "text-gray-400" },
-  improvement: { label: "Improvements", emoji: "", color: "text-gray-400" },
-  fix: { label: "Bug Fixes", emoji: "", color: "text-gray-400" },
+  feature: { label: "New Features", emoji: "", color: "text-teal-400" },
+  improvement: { label: "Improvements", emoji: "", color: "text-blue-400" },
+  fix: { label: "Bug Fixes", emoji: "", color: "text-yellow-400" },
 };
 
 export default function ReleasesPage() {
@@ -103,7 +103,7 @@ export default function ReleasesPage() {
               {/* Release Card */}
               <div className="relative bg-gray-900/50 border border-gray-800 rounded-2xl p-8">
                 {/* Timeline dot */}
-                <div className="absolute -left-6 top-8 w-3 h-3 bg-gray-600 rounded-full border-2 border-black" />
+                <div className="absolute -left-6 top-8 w-3 h-3 bg-teal-500 rounded-full border-2 border-black" />
                 
                 {/* Release Header */}
                 <div className="mb-6">
