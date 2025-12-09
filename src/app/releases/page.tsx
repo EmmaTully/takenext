@@ -57,9 +57,9 @@ const releases: WeeklyRelease[] = [
 ];
 
 const typeConfig = {
-  feature: { label: "New Features", emoji: "🚀", color: "text-teal-400" },
-  improvement: { label: "Improvements", emoji: "✨", color: "text-blue-400" },
-  fix: { label: "Bug Fixes", emoji: "🔧", color: "text-yellow-400" },
+  feature: { label: "New Features", emoji: "", color: "text-gray-400" },
+  improvement: { label: "Improvements", emoji: "", color: "text-gray-400" },
+  fix: { label: "Bug Fixes", emoji: "", color: "text-gray-400" },
 };
 
 export default function ReleasesPage() {
@@ -103,13 +103,13 @@ export default function ReleasesPage() {
               {/* Release Card */}
               <div className="relative bg-gray-900/50 border border-gray-800 rounded-2xl p-8">
                 {/* Timeline dot */}
-                <div className="absolute -left-6 top-8 w-4 h-4 bg-teal-500 rounded-full border-4 border-black" />
+                <div className="absolute -left-6 top-8 w-3 h-3 bg-gray-600 rounded-full border-2 border-black" />
                 
                 {/* Release Header */}
                 <div className="mb-6">
-                  <div className="flex items-baseline gap-3 mb-2">
-                    <h2 className="text-xl font-semibold">Week of {release.weekOf}</h2>
-                    <span className="text-sm text-gray-500">{release.version}</span>
+                  <div className="mb-2">
+                    <h2 className="text-lg font-medium text-gray-200">Week of {release.weekOf}</h2>
+                    <span className="text-xs text-gray-600">{release.version}</span>
                   </div>
                 </div>
 
@@ -120,15 +120,14 @@ export default function ReleasesPage() {
 
                   return (
                     <div key={type} className="mb-6 last:mb-0">
-                      <h3 className={`text-sm font-medium mb-3 ${config.color} flex items-center gap-2`}>
-                        <span>{config.emoji}</span>
-                        <span>{config.label}</span>
-                      </h3>
-                      <ul className="space-y-2">
+                    <h3 className={`text-xs uppercase tracking-wider mb-3 ${config.color} font-normal`}>
+                      {config.label}
+                    </h3>
+                      <ul className="space-y-3">
                         {items.map((item, idx) => (
-                          <li key={idx} className="text-gray-300 text-sm leading-relaxed flex items-start">
-                            <span className="text-gray-600 mr-2">•</span>
-                            <span>{item.description}</span>
+                          <li key={idx} className="text-gray-300 text-sm leading-relaxed pl-4 relative">
+                            <span className="absolute left-0 text-gray-700">•</span>
+                            {item.description}
                           </li>
                         ))}
                       </ul>
